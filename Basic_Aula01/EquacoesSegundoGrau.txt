@@ -1,0 +1,29 @@
+REM programa para resolver equacoes do segundo grau, com 3 valores digitados pelo usuario
+
+10 input "Entre com o valor de a: "; a
+20 input "Entre com o valor de b: "; b
+30 input "Entre com o valor de c: "; c
+
+40 let delta=0
+50 delta = (b*b) - 4 * a * c
+
+60 IF delta>0 THEN GOTO 90 ELSE GOTO 70 
+70 IF delta=0 THEN GOTO 150 ELSE GOTO 80  
+80 GOTO 190 
+
+90 let X1 = (-b + SQR(delta)) / (2 * a)
+100 let X2 = (-b - SQR(delta)) / (2 * a)
+110 print "A equacao possui 2 raizes"   
+120 print "X1 = " + X1
+130 print "X2 = " + X2
+140 GOTO 210
+
+150 let X = -b / (2 * a)
+160 print "A equacao possui 1 raiz"
+170 print "X = " + X
+180 GOTO 210
+
+190 print "A equacao nao possui raiz"
+200 GOTO 210
+210 print "Fim do primeiro programa"
+      
