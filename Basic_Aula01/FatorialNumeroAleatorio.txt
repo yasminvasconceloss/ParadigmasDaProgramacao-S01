@@ -1,0 +1,13 @@
+REM Gere um numero aleatorio e calcule o fatorial
+
+10 num = RND(50)
+20 PRINT "o numero gerado aleatoriamente foi: " + num
+
+30 fat = 1 
+40 cont = 1 
+50 IF cont > num THEN GOTO 90 
+60 fat = fat * cont  
+70 cont = cont + 1
+80 GOTO 50
+
+90 PRINT "O fatorial deste numero e: " + fat
