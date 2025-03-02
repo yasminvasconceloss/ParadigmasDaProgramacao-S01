@@ -1,0 +1,8 @@
+-- Leia um numero e calcule a tabuada dele
+
+print("Digite um numero")
+numero = io.read()
+
+for i = 1, 10 do
+  print(numero .. " x " .. i .. " = " .. numero * i)
+end
