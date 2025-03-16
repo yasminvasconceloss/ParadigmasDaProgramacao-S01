@@ -1,0 +1,25 @@
+use std::io; // Incluindo a biblioteca std::io
+
+// Função main
+pub fn main() {
+    let mut n1_input = String::new(); // Cria n1_input como string mutável
+    let mut n2_input = String::new(); // Cria n2_input como string mutável
+    let mut op = String::new(); // Cria op como string mutável
+
+    io::stdin().read_line(&mut n1_input).expect("failed to read line"); // Lê o n1_input
+    io::stdin().read_line(&mut n2_input).expect("failed to read line"); // Lê o n2_input
+
+    println!("Somar ou multiplicar? (+ ou *)"); // Pergunta se quer somar ou multiplicar
+    io::stdin().read_line(&mut op).expect("failed to read line"); // Lê o operador
+
+    let number1: i32 = n1_input.trim().parse().unwrap(); // Converte n1_input para número
+    let number2: i32 = n2_input.trim().parse().unwrap(); // Converte n2_input para número
+
+    if op.trim() == "+" { // Verifica se o operador é '+'
+        let res = number1 + number2; // Soma os números
+        println!("Soma {} + {} = {}", number1, number2, res); // Imprime o resultado
+    } else if op.trim() == "*" { // Se não for '+', verifica se é '*'
+        let res = number1 * number2; // Multiplica os números
+        println!("Multiplicação {} * {} = {}", number1, number2, res); // Imprime o resultado
+    }
+}
